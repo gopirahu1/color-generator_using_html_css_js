@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            width: 500px;
+            height: 600px;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+        }
+
+        .container span {
+            background-color: black;
+            color: white;
+        }
+        .container button{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <section><br><br><br>
+        <div class="container">
+            <span>Background color:RED</span>
+            <button onclick="change()">click me</button>
+        </div>
+    </section>
+</body>
+<script>
+    //change the color of container along with color name displayed
+    function change() {
+        var container = document.querySelector('.container');
+        var span = document.querySelector('.container span');
+        var button=document.querySelector('.container button');
+        var color = container.style.backgroundColor;
+
+        if (color === 'brown') {
+            container.style.backgroundColor = 'blue';
+            span.innerHTML = 'Background color: blue';
+            button.style.backgroundColor='blue';
+        } else if (color === 'blue') {
+            container.style.backgroundColor = 'green';
+            span.innerHTML = 'Background color: green';
+            button.style.backgroundColor='green';
+        } else if (color === 'green') {
+            container.style.backgroundColor = 'yellow';
+            span.innerHTML = 'Background color: yellow';
+            button.style.backgroundColor='yellow';
+            button.style.color='black';
+        } else if(color==='yellow'){
+            container.style.backgroundColor = 'black';
+            span.innerHTML = 'Background color: black';
+            button.style.backgroundColor='black';
+            button.style.color='white'
+        }
+        else{
+        container.style.backgroundColor = 'brown';
+        span.innerHTML = 'Background color: brown';
+        button.style.backgroundColor='brown';
+        }
+    }
+</script>
+
+</html>
